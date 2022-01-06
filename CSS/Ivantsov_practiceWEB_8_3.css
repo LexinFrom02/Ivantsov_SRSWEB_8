@@ -1,0 +1,50 @@
+body {
+    background-color: #cecece;
+    padding: 0;
+}
+
+/* Задаем размер элемента, положение на странице, отступ слева и время перехода */
+div {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 10px;
+    transition: 1s;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* При наведении курсора отступ слева */
+.container:hover div {
+    left: 500px;
+}
+
+/*Установка цвета элементов.
+Установка скорости изменения значения стилевого свойства, для которого указан переход (отступ) */
+.ease {
+    background-color: blue;
+    transition-timing-function: ease;
+}
+
+.linear {
+    background-color: lime;
+    transition-timing-function: linear;
+}
+
+.ease-in {
+    background-color: mediumseagreen;
+    transition-timing-function: ease-in;
+}
+
+.ease-out {
+    background-color: orangered;
+    transition-timing-function: ease-out;
+}
+
+.ease-in-out {
+    background-color: darkviolet;
+    transition-timing-function: ease-in-out;
+}

@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* Задаем анимацию вращения*/
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wrap {
+    width: 200px;
+    height: 150px;
+    outline: 1px solid #000;
+    display: inline-block;
+    margin: 35px 50px;
+}
+
+.wrap>div {
+    width: 200px;
+    height: 150px;
+    background: rgba(144, 235, 242, 0.5);
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    animation: rotate 6s linear infinite;
+}
+
+.wrap>div>span {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+}
+/* Устанавливаем точку, вокруг которой будет происходить вращения элемента */
+.element-1 {
+    transform-origin: 50% 50%;
+}
+
+.element-2 {
+    transform-origin: top left;
+}
+/* Здесь в диве было указано 110% 110%, а в css 100% 0%, привел к виду с div */
+.element-3 {
+    transform-origin: 110% 110%;
+}
+
+.element-4 {
+    transform-origin: 50px 50px;
+}

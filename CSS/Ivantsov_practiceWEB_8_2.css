@@ -1,0 +1,44 @@
+body {
+    background-color: #cecece;
+    padding: 32px;
+}
+
+button {
+    margin: 25px 15px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid lime;
+    padding: 15px 35px;
+}
+
+/* При наведении курсора на элемент появляется граница внутри элемента, курсор меняет вид на pointer */
+button:hover {
+    outline: 1px solid white;
+    outline-offset: -2px;
+    cursor: pointer;
+}
+
+/* Задаем цвет кнопки с классом, время перехода (при наведении) 1 секунда*/
+.button1 {
+    background-color: #2563E9;
+    transition: 1s;
+}
+
+/* Задаем цвет, на который меняет кнопка при наведении курсора*/
+.button1:hover {
+    background-color: #4478E9;
+}
+
+/* Задаем цвет кнопки с классом, время перехода (при наведении) 1 секунда, 
+задаем имя стилевого свойства, значение которого будет отслеживаться для создания эффекта перехода*/
+.button2 {
+    background-color: #2563E9;
+    transition: 1s;
+    transition-property: background;
+}
+
+/* Задаем цвет, на который меняет кнопка при наведении курсора, убираем внутреннюю границу*/
+.button2:hover {
+    background-color: #E95AD1;
+    outline: none;
+}

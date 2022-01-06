@@ -1,0 +1,43 @@
+/* Задаем характеристики анимации, ориентируясь на положения в 50% и 100% от 
+общей продолжительности анимации*/
+@keyframes bouncing {
+    0% {
+        left: 50px;
+        bottom: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        left: 150px;
+        bottom: 250px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    100% {
+        left: 350px;
+        bottom: 0px;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Прикрепляем анимацию к div, задаем атрибуты анимации, задаем атрибуты элемента */
+div {
+    animation: bouncing 1s cubic-bezier(.1, .25, .1, 1) 0s infinite alternate both;
+    background: lightslategrey;
+    display: block;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    border-radius: 150px;
+    position: relative;
+    margin-top: 250px;
+}
+
+/* Определяем внешний вид и положение элемента на странице через псевдокласс before (до) */
+div:before {
+    content: "Ball";
+    display: inline-block;
+    margin-top: 40px;
+    color: white;
+    font-size: 2rem;
+}
